@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес Зал</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header">
+        <h1>Фитнес Зал "Сила"</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="#" onclick="showPage('home')">Главная</a>
+        <a href="#" onclick="showPage('about')">О нас</a>
+        <a href="#" onclick="showPage('services')">Услуги</a>
+        <a href="#" onclick="showPage('prices')">Цены</a>
+        <a href="#" onclick="showPage('contact')">Контакты</a>
+    </div>
+    
+    <div class="container">
+        <div id="home" class="content">
+            <h2>Добро пожаловать в наш фитнес зал!</h2>
+            <p>У нас самые современные тренажеры и профессиональные тренеры.</p>
+            <p>Начните свой путь к здоровью и красивому телу уже сегодня!</p>
+        </div>
+        
+        <div id="about" class="content hidden">
+            <h2>О нас</h2>
+            <p>Наш фитнес зал открыт с 2010 года.</p>
+            <p>Мы помогли тысячам людей улучшить свое здоровье и физическую форму.</p>
+            <p>Наши тренеры имеют высшее спортивное образование и большой опыт работы.</p>
+        </div>
+        
+        <div id="services" class="content hidden">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Тренировки с персональным тренером</li>
+                <li>Групповые занятия (йога, пилатес, аэробика)</li>
+                <li>Кардио зона</li>
+                <li>Силовая зона</li>
+                <li>Зона для растяжки</li>
+            </ul>
+        </div>
+        
+        <div id="prices" class="content hidden">
+            <h2>Цены</h2>
+            <ul>
+                <li>Абонемент на 1 месяц: 2000 руб.</li>
+                <li>Абонемент на 3 месяца: 5000 руб.</li>
+                <li>Абонемент на 6 месяцев: 9000 руб.</li>
+                <li>Персональные тренировки: 800 руб./час</li>
+                <li>Групповые занятия: включены в абонемент</li>
+            </ul>
+        </div>
+        
+        <div id="contact" class="content hidden">
+            <h2>Контакты</h2>
+            <p>Адрес: г. Москва, ул. Спортивная, д. 15</p>
+            <p>Телефон: +7 (495) 123-45-67</p>
+            <p>Email: info@fitness-sila.ru</p>
+            <p>Режим работы: ежедневно с 8:00 до 22:00</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 Фитнес Зал "Сила". Все права защищены.</p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Скрываем все страницы
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('about').classList.add('hidden');
+            document.getElementById('services').classList.add('hidden');
+            document.getElementById('prices').classList.add('hidden');
+            document.getElementById('contact').classList.add('hidden');
+            
+            // Показываем выбранную страницу
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+
